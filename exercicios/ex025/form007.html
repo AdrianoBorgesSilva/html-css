@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="cadastro.php" method="get">
+    <form action="cadastro.php" method="post">
 
         <p>
             <label for="iest">Estado: </label>
@@ -24,12 +24,22 @@
 
         <p>
             <label for="iprof">Profissão: </label>
-            <input type="text" name="prof" id="iprof">
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="ADM">Administrador</option>
+                <option value="MAR">Marceneiro</option>
+                <option value="MED">Médico</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="imsg">Mensagrm: </label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
         </p>
 
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
+            
         </p>
     </form>
     
